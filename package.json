@@ -1,0 +1,33 @@
+{
+  "name": "vp-report-ui",
+  "version": "1.0.0",
+  "description": "vp report ui",
+  "author": "Lance Fallon",
+  "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "8888"
+    }
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-vue": "^1.0.2",
+    "cookie": "^0.3.1",
+    "js-cookie": "^2.2.0",
+    "nuxt": "^1.0.0",
+    "vue-material": "^1.0.0-beta-8",
+    "vue-toasted": "^1.1.24",
+    "vuex-persistedstate": "^2.5.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1"
+  }
+}

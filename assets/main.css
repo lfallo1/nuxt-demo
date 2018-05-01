@@ -1,0 +1,14 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .22s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+.container
+{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
