@@ -1,7 +1,14 @@
 const pkg = require('./package')
+const webpack = require('webpack')
+
+let commitHash = require('child_process')
+  .execSync('git rev-parse --short HEAD')
+  .toString().trim();
+  // .execSync('git rev-parse  HEAD')
+
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
 
   /*
   ** Headers of the page
@@ -23,6 +30,10 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
+
+  env: {
+    'COMMIT_HASH': JSON.stringify(commitHash)
+  },
 
   /*
   ** Global CSS
@@ -64,11 +75,11 @@ module.exports = {
   */
   build: {
     vendor: ['~/assets/js/util.js'],
+
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-
     },
     cssSourceMap: false
   }

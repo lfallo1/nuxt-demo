@@ -65,7 +65,7 @@
   }
 
   .nav-link-item small:hover{
-    cursor: default;
+    cursor: text;
   }
 
 </style>

@@ -3,7 +3,8 @@ import axios from 'axios'
 
 export const state = () => ({
   auth: null,
-  loading: false
+  loading: false,
+  gitHash: process.env.COMMIT_HASH.replace(/["]+/g, '')
 })
 
 export const getters = {
