@@ -1,6 +1,8 @@
 <template>
-  <footer class="footer">
-      <span class="text-muted">Version | {{git}}</span>
+  <footer class="app-footer">
+    <div class="app-container">
+      <span id="app-version" class="text-muted">Version | {{git}}</span>
+    </div>
   </footer>
 </template>
 
@@ -17,3 +19,9 @@
   }
 
 </script>
+
+<style scoped>
+  #app-version{
+    margin-left: 15px;
+  }
+</style>

@@ -5,11 +5,7 @@
         Programming Export
       </h1>
       <div class="row" v-if="auth">
-        <div class="align-center col-xs-12">
-          <b-btn class="refreshPrograms" variant="outline-success" @click="refreshPrograms" :disabled="refreshing">
-            <i class="material-icons">autorenew</i>{{refreshProgramsText}}
-          </b-btn>
-        </div>
+        <RefreshButton />
       </div>
       <div id="please-login-wrapper" v-else>
         <h4 class="title">Please <nuxt-link to="/login">login</nuxt-link> to refresh worksheets.</h4>
@@ -21,21 +17,17 @@
 
 <script>
 
-  import {mapState, mapActions} from 'vuex'
+  import {mapState} from 'vuex'
+  import RefreshButton from '~/components/refreshButton.vue'
 
   export default {
-
+    components:{
+      RefreshButton
+    },
     computed: {
       ...mapState({
-        refreshing: state => state.reports.refreshing,
         auth: state => state.auth
-      }),
-      refreshProgramsText(){
-        return this.refreshing ? 'Refresh in Progress' : 'Refresh Programs'
-      }
-    },
-    methods: {
-      ...mapActions({refreshPrograms: 'reports/refreshPrograms', logout: 'logout'}),
+      })
     }
   }
 </script>
